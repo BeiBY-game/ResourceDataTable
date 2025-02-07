@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://4el0lhyamppt"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/files/test/weapon.gd" id="1_dkecl"]
+
+[resource]
+script = ExtResource("1_dkecl")
+weapon_type = 5
+health = 100
+id = 1
+item_name = "小苹果"
+description = "物品描述asd"
+can_use = false

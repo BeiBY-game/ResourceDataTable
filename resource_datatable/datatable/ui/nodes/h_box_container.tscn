@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlj2as2pfl0gy"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/nodes/h_data_list.gd" id="1_t12bp"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+script = ExtResource("1_t12bp")

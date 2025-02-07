@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmc7smnpaxgu4"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/nodes/vdatalist.gd" id="1_whdqy"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+script = ExtResource("1_whdqy")

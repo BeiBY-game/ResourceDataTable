@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="TestItem" load_steps=2 format=3 uid="uid://d1fddlvpaeofk"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/files/test/test_item.gd" id="1_rcxhu"]
+
+[resource]
+script = ExtResource("1_rcxhu")

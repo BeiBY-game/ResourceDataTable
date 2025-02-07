@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm4ys57ihgk0a"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/nodes/control.gd" id="1_q0tb7"]
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/nodes/button.gd" id="2_eyira"]
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/nodes/button_2.gd" id="3_ipo5d"]
+
+[node name="AddFile" type="Control"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0tb7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.151119, 0.186808, 0.233884, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Path" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "保存路径"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PathInput" type="LineEdit" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "res://"
+alignment = 1
+
+[node name="FileName" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "文件名"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FileNameInput" type="LineEdit" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = ".tres"
+alignment = 1
+caret_blink = true
+caret_force_displayed = true
+caret_mid_grapheme = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Confirm" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "确认"
+script = ExtResource("2_eyira")
+
+[node name="Return" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "返回"
+script = ExtResource("3_ipo5d")
+
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer/Confirm" to="ColorRect/VBoxContainer/HBoxContainer/Confirm" method="_on_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer/Return" to="ColorRect/VBoxContainer/HBoxContainer/Return" method="_on_button_down"]

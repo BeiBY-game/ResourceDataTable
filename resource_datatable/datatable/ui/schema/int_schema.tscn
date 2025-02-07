@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd5mhn3a5phr7"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/schema_gd/int_schema.gd" id="1_6itsj"]
+
+[node name="int_schema" type="HBoxContainer"]
+alignment = 1
+script = ExtResource("1_6itsj")
+
+[node name="ParamName" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+tooltip_text = "Int type"
+bbcode_enabled = true
+text = "Int Name"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ParamValue" type="SpinBox" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+custom_arrow_step = 1.0

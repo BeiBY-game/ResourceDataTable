@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://b77hnhhpu8av8"]
+
+[ext_resource type="Script" path="res://addons/resource_datatable/datatable/ui/schema_gd/bool_schema.gd" id="1_r41sd"]
+
+[node name="bool_schema" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+offset_right = 129.0
+offset_bottom = 35.0
+alignment = 1
+script = ExtResource("1_r41sd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+tooltip_text = "Bool type"
+bbcode_enabled = true
+text = "String Name"
+fit_content = true
+autowrap_mode = 0
+
+[node name="paramValue" type="CheckBox" parent="."]
+layout_mode = 2
